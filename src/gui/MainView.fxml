@@ -6,19 +6,25 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <content>
       <VBox prefHeight="306.0" prefWidth="540.0">
          <children>
             <MenuBar>
               <menus>
-                <Menu mnemonicParsing="false" text="New Project" />
-                <Menu mnemonicParsing="false" text="New Requirement" />
-                  <Menu mnemonicParsing="false" text="Active" />
-                  <Menu mnemonicParsing="false" text="Closed" />
+                <Menu mnemonicParsing="false" text="New">
+                     <items>
+                        <MenuItem fx:id="menuItemProject" mnemonicParsing="false" onAction="#onMenuItemProjectAction" text="Project" />
+                        <MenuItem fx:id="menuItemRequirement" mnemonicParsing="false" onAction="#onMenuItemRequirementAction" text="Requirement" />
+                     </items></Menu>
+                  <Menu mnemonicParsing="false" text="Project">
+                     <items>
+                        <MenuItem fx:id="menuItemActive" mnemonicParsing="false" onAction="#onMenuItemActiveAction" text="Active" />
+                        <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#onMenuItemCloseAction" text="Close" />
+                     </items></Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
                   </items>
                 </Menu>
               </menus>
